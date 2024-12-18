@@ -1,41 +1,40 @@
-
-  async function fetchDataAndPopulate() {
-    try {
-      // Fetch JSON data
-      const response = await fetch("/board_member/data.json");
+const data = [
+    { "position": "Manager", "name": "John Doe" },
+    { "position": "Developer", "name": "Jane Smith" },
+    { "position": "Designer", "name": "Alice Johnson" },
+    { "position": "Manager", "name": "John Doe" },
+    { "position": "Developer", "name": "Jane Smith" },
+    { "position": "Designer", "name": "Alice Johnson" },
+    { "position": "Manager", "name": "John Doe" },
+    { "position": "Developer", "name": "Jane Smith" },
+    { "position": "Designer", "name": "Alice Johnson" },
+    { "position": "Manager", "name": "John Doe" },
+    { "position": "Developer", "name": "Jane Smith" },
+    { "position": "Designer", "name": "Alice Johnson" }
+  ];
   
-      if (!response.ok) {
-        throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
-      }
+  // Directly populate the scrolling items
+  function populateScrollItems(data) {
+    const scrollInner = document.getElementById("scroll-inner");
+    scrollInner.innerHTML = "";
   
-      const data = await response.json();
-      const scrollInner = document.getElementById("scroll-inner");
+    for (let i = 0; i < 2; i++) {
+      data.forEach((item) => {
+        const scrollItem = document.createElement("div");
+        scrollItem.className = "scroll-item";
   
-      // Clear the container
-      scrollInner.innerHTML = "";
+        const heading = document.createElement("h1");
+        heading.textContent = item.position;
   
-      // Add each item twice for seamless looping
-      for (let i = 0; i < 2; i++) {
-        data.forEach((item) => {
-          const scrollItem = document.createElement("div");
-          scrollItem.className = "scroll-item";
+        const paragraph = document.createElement("p");
+        paragraph.textContent = item.name;
   
-          const heading = document.createElement("h1");
-          heading.textContent = item.position;
-  
-          const paragraph = document.createElement("p");
-          paragraph.textContent = item.name;
-  
-          scrollItem.appendChild(heading);
-          scrollItem.appendChild(paragraph);
-          scrollInner.appendChild(scrollItem);
-        });
-      }
-    } catch (error) {
-      console.error("Error fetching or displaying data:", error);
+        scrollItem.appendChild(heading);
+        scrollItem.appendChild(paragraph);
+        scrollInner.appendChild(scrollItem);
+      });
     }
   }
   
-  // Fetch data and initialize
-  fetchDataAndPopulate();
+  populateScrollItems(data);
   
