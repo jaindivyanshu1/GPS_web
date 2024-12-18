@@ -547,6 +547,72 @@ figcaption {
 }
 
 
+/* Container for scrolling */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  /* background-color: #f9f9f9; */
+  padding: 10px 0;
+  position: relative;
+  display: flex; /* Use flexbox for seamless movement */
+}
+
+/* Scrolling inner wrapper */
+.scroll-inner {
+  display: flex; /* Horizontal layout */
+  animation: infinite-scroll 80s linear infinite;
+}
+
+/* Individual scroll item */
+.scroll-item {
+  flex: 0 0 auto; /* Prevent flexbox resizing */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5%;
+  margin: 0 7px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: normal;
+  text-align: center;
+}
+
+.scroll-item h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.scroll-item p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .scroll-item h1 {
+    font-size: 1rem;
+  }
+  .scroll-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Infinite Scroll Animation */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 
 
