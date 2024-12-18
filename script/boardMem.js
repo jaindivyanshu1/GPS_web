@@ -2,7 +2,7 @@
   async function fetchDataAndPopulate() {
     try {
       // Fetch JSON data
-      const response = await fetch("../board_member/data.json");
+      const response = await fetch("/board_member/data.json");
   
       if (!response.ok) {
         throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
