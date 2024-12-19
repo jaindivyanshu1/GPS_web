@@ -1,16 +1,15 @@
 const data = [
-    { "position": "Manager", "name": "John Doe" },
-    { "position": "Developer", "name": "Jane Smith" },
-    { "position": "Designer", "name": "Alice Johnson" },
-    { "position": "Manager", "name": "John Doe" },
-    { "position": "Developer", "name": "Jane Smith" },
-    { "position": "Designer", "name": "Alice Johnson" },
-    { "position": "Manager", "name": "John Doe" },
-    { "position": "Developer", "name": "Jane Smith" },
-    { "position": "Designer", "name": "Alice Johnson" },
-    { "position": "Manager", "name": "John Doe" },
-    { "position": "Developer", "name": "Jane Smith" },
-    { "position": "Designer", "name": "Alice Johnson" }
+    { "position": "President", "name": "ANIL MEHTA" },
+    { "position": "Vice President", "name": "SANJAY JAIN" },
+    { "position": "Secretary", "name": "NILESH SAKLECHA" },
+    { "position": "Vice Secretary", "name": "VAIBHAV JAIN" },
+    { "position": "Treasurer", "name": "NILESH RANKA" },
+    { "position": "Education Advisor", "name": "DR. RANU SABADRA" },
+    { "position": "Member", "name": "KAMAL JAIN" },
+    { "position": "Member", "name": "TEJARAM PRAJAPAT" },
+    { "position": "Member", "name": "SANDEEP JAIN" },
+    { "position": "Member", "name": "PIYUSH MEHTA" },
+    { "position": "Principal", "name": "RITUBALA KOTHARI" }
   ];
   
   // Directly populate the scrolling items

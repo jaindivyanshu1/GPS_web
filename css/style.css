@@ -601,7 +601,7 @@ figcaption {
 /* Infinite Scroll Animation */
 @keyframes infinite-scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(25%);
   }
   25% {
     transform: translateX(-25%);
