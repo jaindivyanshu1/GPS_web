@@ -9,7 +9,8 @@ const data = [
     { "position": "Member", "name": "TEJARAM PRAJAPAT" },
     { "position": "Member", "name": "SANDEEP JAIN" },
     { "position": "Member", "name": "PIYUSH MEHTA" },
-    { "position": "Principal", "name": "RITUBALA KOTHARI" }
+    { "position": "Principal", "name": "RITUBALA KOTHARI" },
+    { "position": "Acting President", "name": "ASHOK BAFNA" }
   ];
   
   // Directly populate the scrolling items
